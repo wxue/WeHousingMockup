@@ -4,12 +4,66 @@
     <base href="/" />
     <meta http-equiv="X-UA-Compatible" content="IE=Edge; text/html; charset=UTF-8" />
     <title>We Housing</title>
+    <link rel="stylesheet" href="/static/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="/static/css/main.css" />
     <script src="/static/lib/angular.js"></script>
+    <script src="/static/lib/angular-resource.js"></script>
     <script src="/static/lib/ui-bootstrap-tpls-1.1.2.min.js"></script>
+    <script src="/static/lib/smart-table.debug.js"></script>
     <script src="/static/js/app.js"></script>
     <script src="/static/js/controllers.js"></script>
+    <script src="/static/js/services.js"></script>
   </head>
 
-  <body ng-controller="AptCtrl">
+  <body>
+    <div ng-controller="AptCtrl">
+      <!-- <p>{{apt_list}}</p> -->
+      <table class="friend">
+        <tr>
+         <th>
+             <span class="sort" ng-class="{reverse:reverse}"></span>
+         </th>
+         <th>
+             <button ng-click="sortby('popularity')">Popularity</button>
+             <span class="sort" ng-class="{reverse:reverse}"></span>
+         </th>
+         <th>
+             <button ng-click="sortby('price')">Price</button>
+             <span class="sort" ng-class="{reverse:reverse}"></span>
+         </th>
+        </tr>
+        <tr ng-repeat="apt in apt_list | orderBy:sort_key:reverse">
+          <td>{{apt.name}}</td>
+          <td>{{apt.popularity}}</td>
+          <td>{{apt.price}}</td>
+        </tr>
+      </table>
+    </div>
+
+    
+    
+    <!-- <table st-table="apt_list" class="table table-striped">
+      <thead>
+      <tr>
+        <th st-ratio="20" st-sort="name">first name</th>
+        <th st-ratio="20" st-sort="popularity">last name</th>
+        <th st-ratio="10" st-sort="price">age</th>
+      </tr>
+      </thead>
+      <tbody>
+      <tr ng-repeat="row in apt_list">
+        <td st-ratio="20">{{row.name}}</td>
+        <td st-ratio="20">{{row.popularity}}</td>
+        <td st-ratio="10">{{row.price}}</td>
+      </tr>
+      </tbody>
+      <tfoot>
+      <tr>
+        <td colspan="5" class="text-center">
+          <div  st-items-by-page="2" st-pagination=""></div>
+        </td>
+      </tr>
+      </tfoot>
+    </table> -->
   </body>
 </html>

@@ -2,14 +2,14 @@
     "apartments": [
         {
         	"name": "The Pavilion on Berry",
-        	"image": "my favourite 1.jpg",
+        	"image": "apt_01.jpg",
         	"price": 512,
         	"popularity": 4,
         	"description": "University of Minnesota, Twin Cities Minneapolis, MN"
         },
         {        	
         	"name": "Radius @15th",
-        	"image": "my favourite 3.jpg",
+        	"image": "apt_02.jpg",
         	"price": 492,
         	"popularity": 5,
         	"description": "University of Minnesota, Twin Cities Minneapolis, MN"
@@ -17,7 +17,7 @@
         {
 
         	"name": "416 Lofts",
-        	"image": "my favourite 2.jpg",
+        	"image": "apt_03jpg",
         	"price": 460,
         	"popularity": 3,
         	"description": "University of Minnesota, Twin Cities Minneapolis, MN"
@@ -25,10 +25,70 @@
         {
 
         	"name": "Edge on Oak",
-        	"image": "my favourite 5.jpg",
+        	"image": "apt_04.jpg",
         	"price": 532,
         	"popularity": 7,
         	"description": "University of Minnesota, Twin Cities Minneapolis, MN"
+        },
+        {
+            "name": "The Pavilion on Berry",
+            "image": "apt_01.jpg",
+            "price": 512,
+            "popularity": 4,
+            "description": "University of Minnesota, Twin Cities Minneapolis, MN"
+        },
+        {           
+            "name": "Radius @15th",
+            "image": "apt_02.jpg",
+            "price": 492,
+            "popularity": 5,
+            "description": "University of Minnesota, Twin Cities Minneapolis, MN"
+        },
+        {
+
+            "name": "416 Lofts",
+            "image": "apt_03jpg",
+            "price": 460,
+            "popularity": 3,
+            "description": "University of Minnesota, Twin Cities Minneapolis, MN"
+        },
+        {
+
+            "name": "Edge on Oak",
+            "image": "apt_04.jpg",
+            "price": 532,
+            "popularity": 7,
+            "description": "University of Minnesota, Twin Cities Minneapolis, MN"
+        },
+        {
+            "name": "The Pavilion on Berry",
+            "image": "apt_01.jpg",
+            "price": 512,
+            "popularity": 4,
+            "description": "University of Minnesota, Twin Cities Minneapolis, MN"
+        },
+        {           
+            "name": "Radius @15th",
+            "image": "apt_02.jpg",
+            "price": 492,
+            "popularity": 5,
+            "description": "University of Minnesota, Twin Cities Minneapolis, MN"
+        },
+        {
+
+            "name": "416 Lofts",
+            "image": "apt_03jpg",
+            "price": 460,
+            "popularity": 3,
+            "description": "University of Minnesota, Twin Cities Minneapolis, MN"
+        },
+        {
+
+            "name": "Edge on Oak",
+            "image": "apt_04.jpg",
+            "price": 532,
+            "popularity": 7,
+            "description": "University of Minnesota, Twin Cities Minneapolis, MN"
         }
     ]
 }

@@ -1,5 +1,42 @@
 /* Controllers */
 
-weHousingApp.controller('AptCtrl', function ($scope, $log) {
-  $log.log("testing");
+weHousingApp.controller('AptCtrl', function ($scope, $log, AptItem) {
+  // http.get('apt_dummy.json').success(function(data) {
+  //   $scope.apt_list = data;
+  // });
+  $scope.apt_list = [];
+  $scope.apt_list_no_data = true;
+  $scope.get_aptitem_data = function () {
+    AptItem.get({
+    }, function(data) {
+      var temp_data = data.apartments;
+      if (temp_data !== null && temp_data !== undefined) {
+        $scope.apt_list = temp_data;
+        // $scope.apt_list = $scope.apt_list.concat(temp_data);
+        $log.log($scope.apt_list);
+        $scope.apt_list_no_data = false;
+      }
+    }, function(error) {
+      $log.error(error);
+    });
+  }
+  // initialize
+  $scope.get_aptitem_data();
+  $scope.sort_key = 'popularity';
+  $scope.reverse = true;
+  $scope.sortby = function(sort_key) {
+    $scope.reverse = ($scope.sort_key === sort_key) ? !$scope.reverse : false;
+    $scope.sort_key = sort_key;
+  };
+
+  $scope.$watchCollection(
+      function () {
+        return $scope.apt_list_no_data;
+      },
+      function (new_value, old_value) {
+        if (( new_value !== undefined ) && ( new_value !== old_value )) {
+          $scope.sortby('popularity');
+        }
+      }
+  );
 });
