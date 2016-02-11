@@ -1,11 +1,9 @@
 /* Controllers */
 
 weHousingApp.controller('AptCtrl', function ($scope, $log, AptItem) {
-  // http.get('apt_dummy.json').success(function(data) {
-  //   $scope.apt_list = data;
-  // });
   $scope.currentPage = 1;
   $scope.pageSize = 5;
+  $scope.aptCount = 0;
 
   $scope.apt_list = [];
   $scope.apt_list_no_data = true;
@@ -15,7 +13,7 @@ weHousingApp.controller('AptCtrl', function ($scope, $log, AptItem) {
       var temp_data = data.apartments;
       if (temp_data !== null && temp_data !== undefined) {
         $scope.apt_list = temp_data;
-        // $scope.apt_list = $scope.apt_list.concat(temp_data);
+        $scope.aptCount = temp_data.length;
         $log.log($scope.apt_list);
         $scope.apt_list_no_data = false;
       }
