@@ -21,32 +21,34 @@
   <body ng-controller="AptCtrl">
 
     <section>
-        <div class="container">
-            <div class="row">
-                <div class="col-sm-12 text-center">
-                    <h2>We Housing - Apartment</h2>
-                    <button ng-click="sortby('popularity')">Popularity</button>
-                    <span class="sort" ng-class="{reverse:reverse}"></span>
-                    <button ng-click="sortby('price')">Price</button>
-                    <span class="sort" ng-class="{reverse:reverse}"></span>
-                    <hr>
-                </div>
-            </div>
-            <div class="row col-sm-8 col-sm-offset-2">
-              <div ng-repeat="apt in apt_list | orderBy:sort_key:reverse">
-                <div class="col-sm-6" style="padding-bottom: 10px;"><img ng-src="/static/img/{{apt.image}}" class="img-responsive" alt="" /></div>
-                <div class="col-sm-6">
-                  <!-- <div class="col-sm-12"></div> -->
-                  <div><h2>{{apt.name}}</h2></div>
-                  <small>{{apt.description}}</small>
-                  <!-- <div class="col-sm-12"></div> -->
-                  <div class="col-sm-8 col-sm-offset-4 bottom-align-text"><h1><small>from</small> {{apt.price | currency}}</h1></div>
-                  <div class="col-sm-4 col-sm-offset-8 bottom-align-text"><h6>USD / Month</h6></div>
-                </div>
-                <div class="clearfix"></div>
+      <div class="container">
+          <div class="row">
+              <div class="col-sm-12 text-center">
+                  <h2>We Housing - Apartment</h2>
+                  <button ng-click="sortby('popularity')">Popularity</button>
+                  <span class="sort" ng-class="{reverse:reverse}"></span>
+                  <button ng-click="sortby('price')">Price</button>
+                  <span class="sort" ng-class="{reverse:reverse}"></span>
+                  <hr>
               </div>
+          </div>
+          <div class="row col-sm-8 col-sm-offset-2">
+            <!-- Item -->
+            <div id="item" class="row col-sm-12" ng-repeat="apt in apt_list | orderBy:sort_key:reverse">
+              <div class="col-sm-6"><img ng-src="/static/img/{{apt.image}}" class="img-responsive" alt="" /></div>
+              <div class="col-sm-6">
+                <div><h2>{{apt.name}}</h2></div>
+                <small class="item-description">{{apt.description}}</small>
+                <div class="col-sm-12"><br /></div>
+                <div class="col-sm-9 col-sm-offset-4 bottom-align-text item-price"><h1><small class="item-price">from</small> {{apt.price | currency}}</h1></div>
+                <div class="col-sm-4 col-sm-offset-8 bottom-align-text item-price"><h6>USD / Month</h6></div>
+              </div>
+              <div class="clearfix"></div>
             </div>
-        </div>
+            <!-- End of Item -->
+            <div class="clearfix"></div>
+          </div>
+      </div>
     </section>
 
   <hr/>

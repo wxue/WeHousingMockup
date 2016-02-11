@@ -1,5 +1,6 @@
 body {
     overflow-x: hidden;
+    background-color: #E8E8E8;
 }
 
 h1,
@@ -10,4 +11,19 @@ h5,
 h6 {
     font-family: Montserrat,"Helvetica Neue",Helvetica,Arial,sans-serif;
     font-weight: 700;
+}
+
+/* item */
+
+#item {
+  background-color: white; 
+  margin-bottom: 10px;
+}
+
+#item .item-price {
+  color: #FFCC00;
+}
+
+#item .item-description {
+  color: #669999;
 }
