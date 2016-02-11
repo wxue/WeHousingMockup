@@ -16,7 +16,7 @@ weHousingApp.controller('AptCtrl', function ($scope, $log, AptItem) {
       if (temp_data !== null && temp_data !== undefined) {
         $scope.apt_list = temp_data;
         $scope.aptCount = temp_data.length;
-        $log.log($scope.apt_list);
+        // $log.log($scope.apt_list);
         $scope.apt_list_no_data = false;
       }
     }, function(error) {
