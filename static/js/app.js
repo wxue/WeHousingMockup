@@ -1,2 +1,2 @@
-var weHousingApp = angular.module('weHousingApp', ['ngResource', 'smart-table', 'apt.services', 'ngAnimate', 'ui.bootstrap'])
+var weHousingApp = angular.module('weHousingApp', ['ngResource', 'angularUtils.directives.dirPagination', 'apt.services', 'ngAnimate', 'ui.bootstrap'])
 ;

@@ -4,6 +4,9 @@ weHousingApp.controller('AptCtrl', function ($scope, $log, AptItem) {
   // http.get('apt_dummy.json').success(function(data) {
   //   $scope.apt_list = data;
   // });
+  $scope.currentPage = 1;
+  $scope.pageSize = 5;
+
   $scope.apt_list = [];
   $scope.apt_list_no_data = true;
   $scope.get_aptitem_data = function () {

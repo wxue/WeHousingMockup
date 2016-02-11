@@ -13,7 +13,7 @@
     <script src="/static/lib/angular-resource.js"></script>
     <script src="/static/lib/angular-animate.min.js"></script>
     <script src="/static/lib/ui-bootstrap-tpls-1.1.2.min.js"></script>
-    <script src="/static/lib/smart-table.debug.js"></script>
+    <script src="/static/lib/dirPagination.js"></script>
     <script src="/static/js/app.js"></script>
     <script src="/static/js/controllers.js"></script>
     <script src="/static/js/services.js"></script>
@@ -31,9 +31,7 @@
                 </div>
                 <div class="col-sm-4 btn-group ">
                     <button class="btn btn-success uncheckable" ng-click="sortby('popularity')" ng-model="sort_key" uib-btn-radio="'popularity'">Popularity</button>
-                    <!-- <span class="sort" ng-class="{reverse:reverse}"></span> -->
                     <button class="btn btn-success" ng-click="sortby('price')" ng-model="sort_key" uib-btn-radio="'price'">Price</button>
-                    <!-- <span class="sort" ng-class="{reverse:reverse}"></span> -->
                 </div>
               </div>
               <div class="clearfix"></div>
@@ -41,7 +39,7 @@
           </div>
           <div class="row col-sm-8 col-sm-offset-2">
             <!-- Item -->
-            <div id="item" class="row col-sm-12" ng-repeat="apt in apt_list | orderBy:sort_key:reverse">
+            <div id="item" class="row col-sm-12" dir-paginate="apt in apt_list | orderBy:sort_key:reverse | filter:q | itemsPerPage: pageSize" current-page="currentPage">
               <div class="col-sm-6 text-left photo"><img ng-src="/static/img/{{apt.image}}" class="img-responsive" alt="" /></div>
               <div class="col-sm-6">
                 <div><h2>{{apt.name}}</h2></div>
