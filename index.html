@@ -26,7 +26,7 @@
               <h2>We Housing - Apartment</h2>
               <div id="title" class="col-sm-8 col-sm-offset-2">
                 <div class="col-sm-8 text-left amount">
-                  <h5>Minneapolis, MN: {{aptCount}}</h5>
+                  <h5>Minneapolis, MN: {{aptCount}} Apartments</h5>
                 </div>
                 <div class="col-sm-4 btn-group ">
                     <button class="btn btn-success uncheckable" ng-click="sortby('popularity')" ng-model="sort_key" uib-btn-radio="'popularity'">Popularity</button>
@@ -41,7 +41,7 @@
             <div id="item" class="row col-sm-12" dir-paginate="apt in apt_list | orderBy:sort_key:reverse | filter:q | itemsPerPage: pageSize" current-page="currentPage">
               <div class="col-sm-6 text-left photo"><img ng-src="/static/img/{{apt.image}}" class="img-responsive" alt="" /></div>
               <div class="col-sm-6">
-                <div><h2>{{apt.name}}</h2></div>
+                <div><h3><a>{{apt.name}}</a></h3></div>
                 <small class="item-description">{{apt.description}}</small>
                 <div class="col-sm-12"><br /></div>
                 <div class="col-sm-9 col-sm-offset-4 bottom-align-text item-price"><h1><small class="item-price">from</small> {{apt.price | currency}}</h1></div>

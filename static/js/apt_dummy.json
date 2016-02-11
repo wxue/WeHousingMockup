@@ -31,60 +31,60 @@
         	"description": "University of Minnesota, Twin Cities Minneapolis, MN"
         },
         {
-            "name": "The Pavilion on Berry",
+            "name": "The Pavilion on Apple",
             "image": "apt_01.jpg",
-            "price": 512,
-            "popularity": 4,
+            "price": 522,
+            "popularity": 1,
             "description": "University of Minnesota, Twin Cities Minneapolis, MN"
         },
         {           
-            "name": "Radius @15th",
+            "name": "Radius @16th",
             "image": "apt_02.jpg",
-            "price": 492,
-            "popularity": 5,
+            "price": 792,
+            "popularity": 8,
             "description": "University of Minnesota, Twin Cities Minneapolis, MN"
         },
         {
 
-            "name": "416 Lofts",
+            "name": "426 Lofts",
             "image": "apt_03.jpg",
-            "price": 460,
-            "popularity": 3,
+            "price": 860,
+            "popularity": 2,
             "description": "University of Minnesota, Twin Cities Minneapolis, MN"
         },
         {
 
-            "name": "Edge on Oak",
+            "name": "Edge on Grass",
             "image": "apt_04.jpg",
-            "price": 532,
-            "popularity": 7,
+            "price": 539,
+            "popularity": 8,
             "description": "University of Minnesota, Twin Cities Minneapolis, MN"
         },
         {
-            "name": "The Pavilion on Berry",
+            "name": "The Pavilion on Banana",
             "image": "apt_01.jpg",
-            "price": 512,
-            "popularity": 4,
+            "price": 712,
+            "popularity": 9,
             "description": "University of Minnesota, Twin Cities Minneapolis, MN"
         },
         {           
-            "name": "Radius @15th",
+            "name": "Radius @18th",
             "image": "apt_02.jpg",
-            "price": 492,
-            "popularity": 5,
+            "price": 592,
+            "popularity": 4,
             "description": "University of Minnesota, Twin Cities Minneapolis, MN"
         },
         {
 
-            "name": "416 Lofts",
+            "name": "418 Lofts",
             "image": "apt_03.jpg",
-            "price": 460,
-            "popularity": 3,
+            "price": 960,
+            "popularity": 1,
             "description": "University of Minnesota, Twin Cities Minneapolis, MN"
         },
         {
 
-            "name": "Edge on Oak",
+            "name": "Edge on Willow",
             "image": "apt_04.jpg",
             "price": 532,
             "popularity": 7,
