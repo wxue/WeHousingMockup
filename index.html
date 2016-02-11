@@ -43,7 +43,7 @@
             <div id="item" class="row col-sm-12" dir-paginate="apt in apt_list | orderBy:sort_key:reverse | filter:q | itemsPerPage: pageSize" current-page="currentPage">
               <div class="col-sm-6 text-left photo"><img ng-src="/static/img/{{apt.image}}" class="img-responsive" alt="" /></div>
               <div class="col-sm-6">
-                <div><h3><a data-toggle='modal' data-target='#aptdetail'>{{apt.name}}</a></h3></div>
+                <div><h3><a data-toggle='modal' data-target='#aptdetail' ng-click="selected_item(apt.name, apt.image, apt.description)">{{apt.name}}</a></h3></div>
                 <small class="item-description">{{apt.description}}</small>
                 <div class="col-sm-12"><br /></div>
                 <div class="col-sm-9 col-sm-offset-4 bottom-align-text item-price"><h1><small class="item-price">from</small> {{apt.price | currency}}</h1></div>
@@ -57,11 +57,11 @@
                   <div class="modal-content">
                     <div class="modal-header">
                       <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-                      <h4 class="modal-title" id="myModalLabel">{{apt.name}}</h4>
+                      <h4 class="modal-title" id="myModalLabel">{{detail_name}}</h4>
                     </div>
                     <div class="modal-body">
-                      <img ng-src="/static/img/{{apt.image}}" class="img-responsive" alt="" />
-                      <div><h6>{{apt.description}}</h6></div>
+                      <img ng-src="/static/img/{{detail_img}}" class="img-responsive" alt="" />
+                      <div><h6>{{detail_description}}</h6></div>
                     </div>
                     <div class="modal-footer">
                       <button type="button" class="btn btn-default" data-dismiss="modal">OK</button>
@@ -70,7 +70,7 @@
                 </div>
               </div>
               <!-- End of Modal -->
-              
+
             </div>
             <!-- End of Item -->
             <div class="clearfix"></div>

@@ -35,6 +35,13 @@ weHousingApp.controller('AptCtrl', function ($scope, $log, AptItem) {
     $scope.sort_key = sort_key;
   };
 
+  // detail modal
+  $scope.selected_item = function(item_name, item_img, item_description){
+    $scope.detail_name = item_name;
+    $scope.detail_img = item_img;
+    $scope.detail_description = item_description;
+  };
+
   // synchronize data
   $scope.$watchCollection(
       function () {
